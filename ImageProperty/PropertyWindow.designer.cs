@@ -44,8 +44,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SysNextBtn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -208,12 +208,18 @@
             // 
             // SysPrevBtn
             // 
+            this.SysPrevBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SysPrevBtn.BackgroundImage")));
+            this.SysPrevBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SysPrevBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SysPrevBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SysPrevBtn.FlatAppearance.BorderSize = 0;
+            this.SysPrevBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.SysPrevBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SysPrevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SysPrevBtn.Location = new System.Drawing.Point(3, 3);
             this.SysPrevBtn.Name = "SysPrevBtn";
             this.SysPrevBtn.Size = new System.Drawing.Size(33, 150);
             this.SysPrevBtn.TabIndex = 0;
-            this.SysPrevBtn.Text = "<";
             this.SysPrevBtn.UseVisualStyleBackColor = true;
             this.SysPrevBtn.Click += new System.EventHandler(this.SysPrevBtn_Click);
             // 
@@ -229,14 +235,22 @@
             // 
             // SysNextBtn
             // 
+            this.SysNextBtn.BackColor = System.Drawing.Color.White;
+            this.SysNextBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SysNextBtn.BackgroundImage")));
+            this.SysNextBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SysNextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SysNextBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SysNextBtn.FlatAppearance.BorderSize = 0;
+            this.SysNextBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.SysNextBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SysNextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SysNextBtn.Location = new System.Drawing.Point(356, 3);
             this.SysNextBtn.Name = "SysNextBtn";
             this.SysNextBtn.Size = new System.Drawing.Size(34, 150);
             this.SysNextBtn.TabIndex = 1;
-            this.SysNextBtn.Text = ">";
-            this.SysNextBtn.UseVisualStyleBackColor = true;
+            this.SysNextBtn.UseVisualStyleBackColor = false;
             this.SysNextBtn.Click += new System.EventHandler(this.SysNextBtn_Click);
+            this.SysNextBtn.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             // 
             // tabPage2
             // 
@@ -250,6 +264,16 @@
             this.tabPage2.Text = "Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(71, 390);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Coming Soon... In next Version.";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -260,16 +284,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(71, 390);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Coming Soon... In next Version.";
             // 
             // PropertyWindow
             // 

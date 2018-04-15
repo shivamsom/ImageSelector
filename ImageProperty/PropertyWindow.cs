@@ -22,12 +22,23 @@ namespace PropertyWindow
         public PropertyWindow()
         {
             InitializeComponent();
+
+            if (!Directory.Exists(Environment.CurrentDirectory + @"\Collection"))
+            {
+                Directory.CreateDirectory(Environment.CurrentDirectory + @"\Collection");
+                ImageProperty.Properties.Resources.Lighthouse.Save(Environment.CurrentDirectory + @"\Collection\0.jpeg");
+                ImageProperty.Properties.Resources.Penguins.Save(Environment.CurrentDirectory + @"\Collection\1.jpeg");
+                ImageProperty.Properties.Resources.Tulips.Save(Environment.CurrentDirectory + @"\Collection\2.jpeg");
+
+
+            }
+
         }
         private void setPreviewImage()
         {try
             {
                 previewPictureBox.Image = pictureBox1.Image;
-                //   MessageBox.Show(sysCollPath[i]+"Value of i:"+i); //for testing
+               //   MessageBox.Show(sysCollPath[i]+"Value of i:"+i); //for testing
                 imagePath = sysCollPath[i];
             }
             catch(Exception ex)
@@ -73,6 +84,7 @@ namespace PropertyWindow
         private void PropertyWindow_Load(object sender, EventArgs e)
         { try
             {
+               
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 previewPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 sysCollPath = Directory.GetFiles(Environment.CurrentDirectory + @"\Collection");
@@ -109,6 +121,7 @@ namespace PropertyWindow
                         File.Copy(imgpath, Environment.CurrentDirectory + @"\Collection\" + ofd.SafeFileName);
                         sysCollPath = Directory.GetFiles(Environment.CurrentDirectory + @"\Collection");
                         pictureBox1.Image = Image.FromFile(ofd.FileName);
+                        setPreviewImage();
                     }
                 }
             }
